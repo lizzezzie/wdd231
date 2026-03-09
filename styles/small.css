@@ -1,0 +1,139 @@
+/* Custom Properties */
+:root {
+    --primary-color: #003366; 
+    --secondary-color: #f0f0f0;
+    --accent-color: #ffcc00;
+    --completed-color: #d1e7dd; /* finished courses clor */
+    --font-family: 'Roboto', sans-serif; /* Google Font */
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Logo */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    width: 50px; /* small SVG */
+    height: auto;
+}
+
+/* Navigation - Mobile (Hamburger Menu Style) */
+nav {
+    background-color: #333;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden */
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation li a {
+    display: block;
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.navigation li a:hover {
+    background-color: #555;
+    color: var(--accent-color);
+}
+
+/* Main Content */
+main {
+    padding: 1rem;
+    max-width: 100%;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Sections & Course Cards */
+section {
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+#courses {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.course-card {
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style - Finished Courses */
+.course-card.completed {
+    background-color: var(--completed-color);
+    border-left: 5px solid green;
+}
+
+/* Filter Buttons */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer .socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#lastModified {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+}
