@@ -40,8 +40,14 @@ nav {
     margin: 0;
     display: none; /* Hidden */
 }
+#menu::before {
+    content: "☰";
+}
+#menu.show::before {
+    content: "❌";
+}
 
-.navigation.open {
+.navigation.show {
     display: block;
 }
 
