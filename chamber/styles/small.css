@@ -1,0 +1,14 @@
+#members.grid {
+display: grid;
+grid-template-columns: 1fr;
+gap: 1rem;
+}
+
+#members.list {
+display: block;
+}
+
+#members section {
+border: 1px solid #ccc;
+padding: 1rem;
+}
