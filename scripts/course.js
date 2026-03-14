@@ -85,8 +85,15 @@ function displayCourses(filteredCourses) {
     filteredCourses.forEach(course => {
         const card = document.createElement("div");
         card.className = course.completed ? "course-card completed" : "course-card";
-        card.innerHTML = `<strong>${course.subject} ${course.number}</strong><br>${course.title}<br>Credits: ${course.credits}`;
+        card.innerHTML = `
+            <h3>${course.subject} ${course.number}</h3>
+            <p>${course.title}</p>
+            <p>${course.technology.join(", ")}</p>
+            <p>Credits: ${course.credits}</p>
+            ${course.completed ? "<p>✓ Completed</p>" : ""}
+            `;
         container.appendChild(card);
+
     });
 
     const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);

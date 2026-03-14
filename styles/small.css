@@ -113,6 +113,12 @@ section {
     text-align: center;
     font-weight: bold;
 }
+.course-card h3 {
+    margin-bottom: 0.5rem;
+}
+.course-card p {
+    margin: 0.25rem 0;
+}
 
 /* Style - Finished Courses */
 .course-card.completed {
