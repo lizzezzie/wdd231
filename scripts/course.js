@@ -85,12 +85,12 @@ function displayCourses(filteredCourses) {
     filteredCourses.forEach(course => {
         const card = document.createElement("div");
         card.className = course.completed ? "course-card completed" : "course-card";
-        card.textContent = `${course.subject} ${course.number}`;
+        card.innerHTML = `<strong>${course.subject} ${course.number}</strong><br>${course.title}<br>${course.description}<br>Credits: ${course.credits}`;
         container.appendChild(card);
     });
 
     const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    document. querySelector("#total-credits").textContent = total;
+    document.querySelector("#total-credits").textContent = total;
 
 }
 
