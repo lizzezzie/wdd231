@@ -85,7 +85,7 @@ function displayCourses(filteredCourses) {
     filteredCourses.forEach(course => {
         const card = document.createElement("div");
         card.className = course.completed ? "course-card completed" : "course-card";
-        card.innerHTML = `<strong>${course.subject} ${course.number}</strong><br>${course.title}<br>${course.description}<br>Credits: ${course.credits}`;
+        card.innerHTML = `<strong>${course.subject} ${course.number}</strong><br>${course.title}<br>Credits: ${course.credits}`;
         container.appendChild(card);
     });
 
