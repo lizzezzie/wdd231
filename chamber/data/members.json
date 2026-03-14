@@ -1,0 +1,78 @@
+{
+  "members":[
+    {
+        "name":"Safari Tech Solutions",
+        "address":"Westlands, Nairobi",
+        "phone":"0712345678",
+        "website":"https://safaritech.co.ke",
+        "image":"business1.webp",
+        "membership":3
+    },
+
+    {
+        "name":"Green Farm Market",
+        "address":"Karen, Nairobi",
+        "phone":"0723456789",
+        "website":"https://greenfarm.co.ke",
+        "image":"business2.webp",
+        "membership":2
+    },
+
+    {
+        "name":"Nairobi Coffee House",
+        "address":"CBD Nairobi",
+        "phone":"0700111222",
+        "website":"https://nairobicoffee.com",
+        "image":"business3.webp",
+        "membership":1
+    },
+    {
+        "name":"Tech Innovators Ltd",
+        "address":"Westlands, Nairobi",
+        "phone":"0711223344",
+        "website":"https://techinnovators.co.ke",
+        "image":"business4.webp",
+        "membership":3
+    },
+    {
+        "name":"Eco-Friendly Solutions",
+        "address":"Karen, Nairobi",
+        "phone":"0722334455",
+        "website":"https://ecofriendlysolutions.co.ke",
+        "image":"business5.webp",
+        "membership":2
+    },
+    {
+        "name":"Urban Eats Restaurant",
+        "address":"CBD Nairobi",
+        "phone":"0700334455",
+        "website":"https://urbaneats.co.ke",
+        "image":"business6.webp",
+        "membership":1
+    },
+    {
+        "name":"Creative Design Studio",
+        "address":"Westlands, Nairobi",
+        "phone":"0711223344",
+        "website":"https://creativedesign.co.ke",
+        "image":"business7.webp",
+        "membership":3
+    },
+    {
+        "name":"Healthy Living Store",
+        "address":"Karen, Nairobi",
+        "phone":"0722334455",
+        "website":"https://healthyliving.co.ke",
+        "image":"business8.webp",
+        "membership":2
+    },
+    {
+        "name":"City Fitness Gym",
+        "address":"CBD Nairobi",
+        "phone":"0700334455",
+        "website":"https://cityfitness.co.ke",
+        "image":"business9.webp",
+        "membership":1
+    }
+  ]
+}
