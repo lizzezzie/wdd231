@@ -1,6 +1,6 @@
 /* Custom Properties */
 :root {
-    --primary-color: #003366; 
+    --primary-color: #032649; 
     --secondary-color: #f0f0f0;
     --accent-color: #ffcc00;
     --completed-color: #d1e7dd; /* finished courses clor */
@@ -44,7 +44,7 @@ header {
 
 /* Navigation - Mobile (Hamburger Menu Style) */
 nav {
-    background-color: #333;
+    background-color: #444;
 }
 
 .navigation {
@@ -70,12 +70,12 @@ nav {
     padding: 1rem;
     text-decoration: none;
     text-align: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #555;
 }
 
 .navigation li a:hover {
-    background-color: #555;
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 /*----------Main Content-----------*/
