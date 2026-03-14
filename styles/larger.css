@@ -3,11 +3,9 @@
 /* 1. header */
 
     header {
-        background-color: var(--primary-color);
         width: 100%;
         padding: 1.5rem;
         border-bottom: 1px solid #ddd;
-        color: black;
     }
     
     
@@ -23,7 +21,7 @@
         margin: 0;
         display: flex; /* Show horizontal menu */
         justify-content: center;
-        background-color: #444;
+        background-color: var(--primary-color);
     }
 
     .navigation li {
@@ -47,7 +45,7 @@
     /* 3. Card Layout */
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
+        grid-template-columns: 1fr 2fr; /* Two columns for larger screens */
         gap: 20px;
     }
 
