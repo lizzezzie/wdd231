@@ -6,12 +6,15 @@
     --completed-color: #d1e7dd; /* finished courses clor */
     --font-family: 'Roboto', sans-serif; /* Google Font */
 }
-
-body {
-    font-family: var(--font-family);
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
 }
 
 /* Header & Logo */
@@ -23,10 +26,20 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-header img {
-    width: 50px; /* small SVG */
+.branding img {
+    width: 40px; /* small SVG */
     height: auto;
+}
+
+.branding span {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 /* Navigation - Mobile (Hamburger Menu Style) */
@@ -65,7 +78,7 @@ nav {
     color: var(--accent-color);
 }
 
-/* Main Content */
+/*----------Main Content-----------*/
 main {
     padding: 1rem;
     max-width: 100%;
@@ -74,6 +87,7 @@ main {
 h1, h2 {
     color: var(--primary-color);
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 /* Sections & Course Cards */
@@ -114,14 +128,40 @@ section {
     margin-bottom: 1rem;
 }
 
-button {
+.filters button {
     padding: 0.5rem 1rem;
     background-color: var(--primary-color);
+    margin-right: 0.5rem;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
+.filters button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Resources List */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: .5rem;
+}
+
+ul a {
+    text-decoration: none;
+    color: black;
+
+}
+
+ul a:hover {
+    text-decoration: underline;
+}
+
 
 /* Footer */
 footer {
@@ -131,12 +171,18 @@ footer {
     padding: 1.5rem;
     margin-top: 2rem;
 }
+.socials {
+    margin-top: 1rem;
+}
 
-footer .socials a {
+.socials a {
     color: white;
     margin: 0 10px;
     font-size: 1.5rem;
     text-decoration: none;
+}
+.socials a:hover {
+    color: var(--accent-color);
 }
 
 #lastModified {
