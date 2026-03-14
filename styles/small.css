@@ -119,6 +119,12 @@ section {
     margin: 0.25rem 0;
 }
 
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 /* Style - Finished Courses */
 .course-card.completed {
     background-color: var(--completed-color);
@@ -147,48 +153,40 @@ section {
     color: var(--primary-color);
 }
 
-/* Resources List */
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-ul li {
-    margin-bottom: .5rem;
-}
-
-ul a {
-    text-decoration: none;
-    color: black;
-
-}
-
-ul a:hover {
-    text-decoration: underline;
-}
-
 
 /* Footer */
 footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 2rem;
+    padding: 3rem 1rem 1rem;
+    position: relative;
+    margin-top: 50px;
 }
 .socials {
-    margin-top: 1rem;
+    margin-top: -100px;
+   
+}
+.socials a {
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+
+}
+.socials img {
+    width: 28px;
+    height: 28px;
+    margin: 0 8px;
+    transition: transform 0.2s ease;
 }
 
-.socials a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
+.socials img:hover {
+    transform: scale(1.75);
 }
-.socials a:hover {
-    color: var(--accent-color);
-}
+
 
 #lastModified {
     color: var(--accent-color);

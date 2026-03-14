@@ -1,6 +1,6 @@
 /* Media Query for above 600px */
 @media (min-width: 600px) {
-/* 1. header */
+/* header */
 
     header {
         width: 100%;
@@ -45,7 +45,7 @@
     /* 3. Card Layout */
     main {
         display: grid;
-        grid-template-columns: 1fr 2fr; /* Two columns for larger screens */
+        grid-template-columns: 2fr 1fr; /* Two columns for larger screens */
         gap: 20px;
     }
 
@@ -55,12 +55,13 @@
     
     /* Course Cards */
     #courses {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns with a minimum width */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns with a minimum width */
         gap: 20px;
     }
-    .course card {
-        min-height: 120px; /* Ensure cards have a minimum height for better visuals */
-    }   
+    .web-certificate {
+        grid-column: 1 / -1; /* Make the web certificate section span across both columns */
+    }
+    
 
     /* 4. Footprint/Visuals */
     section {
