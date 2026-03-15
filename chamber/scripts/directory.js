@@ -2,9 +2,13 @@ const url = "data/members.json";
 const cards = document.querySelector("#members");
 
 async function getMembers() {
+   try { 
     const response = await fetch(url);
     const data = await response.json();
     displayMembers(data.members);
+ } catch (error) {
+    console.error("Error loading member data:", error);
+ }    
 }
 
 function displayMembers(members) {
@@ -23,11 +27,13 @@ function displayMembers(members) {
         address.textContent = member.address;
         phone.textContent = member.phone;
 
-        website.textContent = "Visit Website";
+        website.textContent = `Visit ${member.name}`;
         website.href = member.website;
+        website.target = "_blank";
 
         image.src = `images/${member.image}`;
         image.alt = member.name;
+        image.loading = "lazy";
 
         card.appendChild(image);
         card.appendChild(name);
