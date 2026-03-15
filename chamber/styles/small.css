@@ -28,15 +28,29 @@ nav {
     justify-content: center;
 
 }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav li {
+    margin: 5px;
+}
 nav a {
+    display: block;
     color: white;
-    padding: 0.5rem;
-    margin: 0.5rem;
+    padding: 15px 20px;
     text-decoration: none;
-
+    min-width: 44px;
+    min-height: 44px;
+    line-height: 1.2;
 }
 nav a:hover {
     color: #06d9c0;
+    background-color: rgba(255,255,255,0.1);
     text-decoration: underline;
 }
 
@@ -79,16 +93,22 @@ section {
 }
 
 /* Member section styles */
+#members section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+    background: white;
+}
+
 #members.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
-#members .grid img {
+#members.grid img {
     width: 100%;
     height: auto;
 }
-
 #members.list {
     display: block;
 }
@@ -96,26 +116,35 @@ section {
     margin: 0;
 }
 
-#members.list img {
+#members.list section img {
+    grid-column: 1;
+    grid-row: 1 / 6;
     width: 150px;
     height: auto;
-}
+}    
 
-#members section {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 6px;
-    background: white;
-}
 #members.list section {
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: 1rem;
-    align-items: center;
+    align-items: start;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
 }
-#members.list section p {
-    margin: 0.25rem 0;
+#members.list section h3, 
+#members.list section p, 
+#members.list section a {
+    grid-column: 2;
+    margin: 0.2rem 0; 
+    text-align: left;
 }
+#members.list section a {
+    display: block;
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+
 
 /* Footer styles */
 footer {
