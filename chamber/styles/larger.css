@@ -1,7 +1,8 @@
 @media screen and (min-width: 768px){
 
-#members.grid{
-grid-template-columns: repeat(3,1fr);
-}
+    #members.grid{
+    grid-template-columns: repeat(3,1fr);
+    }
+
 
 }
