@@ -96,6 +96,10 @@ section {
 #members section h2 {
     margin-top: 0;
 }
+#members img {
+    width: 100%;
+    height: auto;
+}
 
 /* Footer styles */
 footer {
