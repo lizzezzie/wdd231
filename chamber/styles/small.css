@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1a0433;
+    --primary-color: #041933;
     --secondary-color: #21384d;
     --background-color: #e5e7e8;
     --text-color: #212529;
@@ -84,21 +84,37 @@ section {
     grid-template-columns: 1fr;
     gap: 1rem;
 }
+#members .grid img {
+    width: 100%;
+    height: auto;
+}
 
 #members.list {
     display: block;
+}
+#members.list section h3 {
+    margin: 0;
+}
+
+#members.list img {
+    width: 150px;
+    height: auto;
 }
 
 #members section {
     border: 1px solid #ccc;
     padding: 1rem;
+    border-radius: 6px;
+    background: white;
 }
-#members section h2 {
-    margin-top: 0;
+#members.list section {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 1rem;
+    align-items: center;
 }
-#members img {
-    width: 100%;
-    height: auto;
+#members.list section p {
+    margin: 0.25rem 0;
 }
 
 /* Footer styles */
