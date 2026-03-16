@@ -71,3 +71,15 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 
 document.querySelector("#lastModified").textContent =
 "Last Modified: " + document.lastModified;
+
+//menu button
+const menuBtn = document.querySelector('#menuBtn');
+const nav = document.querySelector('#navLinks');
+
+    menuBtn.onclick = () => {
+        nav.classList.toggle('show');
+        menuBtn.innerHTML = nav.classList.contains('show') ? '&#10006;' : '&#9776;';
+};
+
+
+

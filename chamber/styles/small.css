@@ -4,70 +4,97 @@
     --background-color: #e5e7e8;
     --text-color: #212529;
 }
+
+/* Base */
 body {
     font-family: Arial, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+    margin: 0;
 }
 
-/* Header styles */
+/* Header */
+
 header {
     background-color: var(--primary-color);
     color: white;
     padding: 1rem;
-    text-align: center;
 }
+
 header h1 {
     margin: 0;
 }
 
-/* Navigation styles */
-nav {
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
+/* Navigation */
 
+nav {
+    margin-top: .5rem;
 }
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-nav li {
-    margin: 5px;
-}
-nav a {
-    display: block;
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    min-width: 44px;
-    min-height: 44px;
-    line-height: 1.2;
-}
-nav a:hover {
-    color: #06d9c0;
-    background-color: rgba(255,255,255,0.1);
-    text-decoration: underline;
 }
 
-/* Main content styles */
+nav a {
+    display: block;
+    padding: .75rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Active page indicator */
+
+nav a.active {
+    background-color: #06d9c0;
+    color: black;
+    font-weight: bold;
+}
+
+/* Menu Button */
+
+#menuBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+
+#navLinks {
+    display: none;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+
+#navLinks.show {
+    display: flex;
+}
+
+/* Main */
+
 main {
     padding: 1rem;
 }
 
-/* Section styles */
+/* Sections */
+
 section {
     margin-bottom: 2rem;
 }
 
-/* button styles */
+/* View Buttons */
+
 .view-buttons {
     display: flex;
-    gap: 0.5rem;
+    gap: .5rem;
     margin-bottom: 1rem;
 }
 
@@ -75,7 +102,7 @@ section {
     background-color: var(--secondary-color);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: .5rem 1rem;
     cursor: pointer;
 }
 
@@ -92,7 +119,8 @@ section {
     outline: 2px solid #06d9c0;
 }
 
-/* Member section styles */
+/* Member Cards */
+
 #members section {
     border: 1px solid #ccc;
     padding: 1rem;
@@ -100,57 +128,85 @@ section {
     background: white;
 }
 
+/* Grid View */
+
 #members.grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
+
 #members.grid img {
     width: 100%;
     height: auto;
 }
+
+/* List View */
+
 #members.list {
     display: block;
 }
-#members.list section h3 {
-    margin: 0;
-}
-
-#members.list section img {
-    grid-column: 1;
-    grid-row: 1 / 6;
-    width: 150px;
-    height: auto;
-}    
 
 #members.list section {
     display: grid;
     grid-template-columns: 150px 1fr;
     gap: 1rem;
     align-items: start;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
 }
-#members.list section h3, 
-#members.list section p, 
+
+#members.list img {
+    grid-column: 1;
+    grid-row: 1 / 6;
+    width: 150px;
+    height: auto;
+}
+
+#members.list section h3,
+#members.list section p,
 #members.list section a {
     grid-column: 2;
-    margin: 0.2rem 0; 
+    margin: .2rem 0;
     text-align: left;
 }
+
 #members.list section a {
     display: block;
     color: #0000EE;
     text-decoration: underline;
 }
 
+/* Footer */
 
-
-/* Footer styles */
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     padding: 1rem;
-    width: 100%;
+}
+
+/* Desktop Layout */
+
+@media screen and (min-width: 768px) {
+
+    #menuBtn {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navLinks {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        gap: 1rem;
+    }
+
+    #members.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }

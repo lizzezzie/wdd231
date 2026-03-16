@@ -1,8 +1,26 @@
-@media screen and (min-width: 768px){
+/* Desktop Layout */
 
-    #members.grid{
-    grid-template-columns: repeat(3,1fr);
+@media screen and (min-width: 768px) {
+
+    #menuBtn {
+        display: none;
     }
 
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #navLinks {
+        display: flex;
+        flex-direction: row;
+        background: none;
+        gap: 1rem;
+    }
+
+    #members.grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
 }
