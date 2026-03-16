@@ -7,7 +7,7 @@
 
 /* Base */
 body {
-    font-family: Arial, sans-serif;
+    font-family: roboto, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
