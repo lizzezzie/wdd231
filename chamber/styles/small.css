@@ -155,10 +155,7 @@ section {
 }
 
 #members.list img {
-    grid-column: 1;
-    grid-row: 1 / 6;
-    width: 150px;
-    height: auto;
+    display: none;
 }
 
 #members.list section h3,
