@@ -67,6 +67,10 @@ nav {
     font-size: 1.5rem;
 }
 
+.navigation.open {
+    display: flex;
+}
+
 /*Hero Section*/
 .hero {
     position: relative;
