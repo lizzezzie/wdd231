@@ -7,7 +7,7 @@
       "phone":"+254 712 111 111",
       "website":"https://metrotech.co.ke",
       "image":"metrotech.webp",
-      "membership":3
+      "membership":"member"
     },
 
     {
@@ -16,7 +16,7 @@
       "phone":"+254 712 222 222",
       "website":"https://greenvalley.co.ke",
       "image":"greenvalley.webp",
-      "membership":2
+      "membership":"silver"
     },
 
     {
@@ -25,7 +25,7 @@
       "phone":"+254 712 333 333",
       "website":"https://savannacoffee.co.ke",
       "image":"savanna.webp",
-      "membership":1
+      "membership": "gold"
     },
 
     {
@@ -34,7 +34,7 @@
       "phone":"+254 712 444 444",
       "website":"https://bluewave.co.ke",
       "image":"bluewave.webp",
-      "membership":3
+      "membership":"member"
     },
 
     {
@@ -43,7 +43,7 @@
       "phone":"+254 712 555 555",
       "website":"https://sunrisebakery.co.ke",
       "image":"sunrise.webp",
-      "membership":1
+      "membership":"silver"
     },
 
     {
@@ -52,7 +52,7 @@
       "phone":"+254 712 666 666",
       "website":"https://safariprint.co.ke",
       "image":"print.webp",
-      "membership":2
+      "membership": "gold"
     },
 
     {
@@ -61,7 +61,7 @@
       "phone":"+254 712 777 777",
       "website":"https://urbangarden.co.ke",
       "image":"garden.webp",
-      "membership":1
+      "membership":"gold"
     }
 
   ]
