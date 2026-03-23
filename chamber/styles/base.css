@@ -84,8 +84,8 @@ nav {
 
 .hero-text {
     position: absolute;
-    top: 20%;
-    left: 20%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     
     background: rgba(0, 0, 0, 0.6);
