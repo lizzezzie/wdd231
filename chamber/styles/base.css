@@ -63,8 +63,6 @@ nav {
     text-decoration: none;
     padding: 0.5rem;
     display: block;
-}
-.navigation li a {
     transition: background 0.3s, color 0.3s;
 }
 
@@ -80,8 +78,6 @@ nav {
     border: none;
     color: white;
     font-size: 1.5rem;
-}
-#menu-btn {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 5px;
@@ -125,8 +121,6 @@ nav {
     color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
-}
-.cta-btn {
     transition: background 0.3s, transform 0.2s;
 }
 
