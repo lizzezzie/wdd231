@@ -84,8 +84,8 @@ nav {
 
 .hero-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 20%;
     transform: translate(-50%, -50%);
     
     background: rgba(0, 0, 0, 0.6);
@@ -114,6 +114,24 @@ section {
 
 h2 {
     margin-bottom: 0.5rem;
+}
+
+/* Weather   */
+.weather p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+}
+
+.forecast ul {
+    list-style: none;
+    padding: 0;
+}
+
+.forecast li {
+    background: #f4f4f4;
+    margin: 0.3rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
 /* Sportlite cards */
