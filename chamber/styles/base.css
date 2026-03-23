@@ -59,6 +59,15 @@ nav {
     padding: 0.5rem;
     display: block;
 }
+.navigation li a {
+    transition: background 0.3s, color 0.3s;
+}
+
+.navigation li a:hover {
+    background: white;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
 
 
 #menu-btn {
@@ -102,6 +111,14 @@ nav {
     color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
+}
+.cta-btn {
+    transition: background 0.3s, transform 0.2s;
+}
+
+.cta-btn:hover {
+    background: #e66a00;
+    transform: scale(1.05);
 }
 
 main {
