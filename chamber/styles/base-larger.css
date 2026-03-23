@@ -1,0 +1,29 @@
+/* Responsiveness */
+@media (min-width: 768px) {
+
+    /* NAVIGATION */
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #menu-btn {
+        display: none;
+    }
+
+    /* MAIN GRID */
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    .hero {
+        grid-column: span 2;
+    }
+
+    .spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

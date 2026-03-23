@@ -60,6 +60,7 @@ nav {
     display: block;
 }
 
+
 #menu-btn {
     background: none;
     border: none;
@@ -98,7 +99,7 @@ nav {
     margin-top: 10px;
     padding: 0.7rem 1.2rem;
     background: var(--accent-color);
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
 }
@@ -141,32 +142,3 @@ footer {
     padding: 1rem;
 }
 
-/* Responsiveness */
-@media (min-width: 768px) {
-
-    /* NAVIGATION */
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    #menu-btn {
-        display: none;
-    }
-
-    /* MAIN GRID */
-    main {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 1rem;
-    }
-
-    .hero {
-        grid-column: span 2;
-    }
-
-    .spotlight-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
