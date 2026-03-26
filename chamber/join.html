@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber Membership Join</title>
+    <meta name="description" content="Apply to join the Chamber of Commerce as a member.">
+    <meta name="author" content="Elizabeth Njoroge">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Scripts for form timestamp and modal behavior -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <!-- Header & Navigation (use your template header) -->
+    <header>
+        <h1>Chamber of Commerce Membership</h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-page-container">
+        <!-- Membership Form -->
+        <form id="membership-form" action="thankyou.html" method="get">
+            <fieldset>
+                <legend>Membership Application Form</legend>
+
+                <label for="first-name">
+                    First Name
+                    <input type="text" id="first-name" name="first-name" required title="Enter your first name" autocomplete="given-name">
+                </label>
+
+                <label for="last-name">
+                    Last Name
+                    <input type="text" id="last-name" name="last-name" required title="Enter your last name" autocomplete="family-name">
+                </label>
+
+                <label for="org-title">
+                    Organization Title
+                    <input type="text" id="org-title" name="org-title" title="Enter your organizational title (letters, hyphens, spaces only, min 7 chars)" 
+                           pattern="[A-Za-z\s\-]{7,}" autocomplete="organization-title">
+                </label>
+
+                <label for="email">
+                    Email Address
+                    <input type="email" id="email" name="email" required title="Enter your email address" 
+                           autocomplete="email" placeholder="example@company.com">
+                </label>
+
+                <label for="phone">
+                    Mobile Number
+                    <input type="tel" id="phone" name="phone" required title="Enter your mobile number" autocomplete="tel">
+                </label>
+
+                <label for="org-name">
+                    Organization / Business Name
+                    <input type="text" id="org-name" name="org-name" required title="Enter your organization's name" autocomplete="organization">
+                </label>
+
+                <!-- Membership Level Selection -->
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label>
+                        <input type="radio" name="membership-level" value="np" required>
+                        NP Membership (No Fee)
+                    </label>
+                    <label>
+                        <input type="radio" name="membership-level" value="bronze">
+                        Bronze Membership
+                    </label>
+                    <label>
+                        <input type="radio" name="membership-level" value="silver">
+                        Silver Membership
+                    </label>
+                    <label>
+                        <input type="radio" name="membership-level" value="gold">
+                        Gold Membership
+                    </label>
+                </fieldset>
+
+                <label for="description">
+                    Organization Description
+                    <textarea id="description" name="description" title="Describe your business or organization"></textarea>
+                </label>
+
+                <!-- Hidden Timestamp -->
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Submit Membership Application">
+            </fieldset>
+        </form>
+
+        <!-- Membership Cards -->
+        <section class="membership-cards">
+            <div class="card" data-modal="np-modal">NP Membership <a href="#">Learn More</a></div>
+            <div class="card" data-modal="bronze-modal">Bronze Membership <a href="#">Learn More</a></div>
+            <div class="card" data-modal="silver-modal">Silver Membership <a href="#">Learn More</a></div>
+            <div class="card" data-modal="gold-modal">Gold Membership <a href="#">Learn More</a></div>
+        </section>
+
+        <!-- Modals -->
+        <dialog id="np-modal">
+            <h2>NP Membership Benefits</h2>
+            <p>No fee. Access to events and newsletter.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="bronze-modal">
+            <h2>Bronze Membership Benefits</h2>
+            <p>Includes advertising, event discounts, and newsletter.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="silver-modal">
+            <h2>Silver Membership Benefits</h2>
+            <p>All Bronze benefits plus priority training and spotlight on home page.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="gold-modal">
+            <h2>Gold Membership Benefits</h2>
+            <p>All Silver benefits plus exclusive events, premium advertising, and VIP discounts.</p>
+            <button class="close-modal">Close</button>
+        </dialog>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+       <p>Nairobi Chamber of Commerce</p>
+        <p>123 Kenyatta Avenue, Nairobi Kenya</p>
+        <p>info@nairobi-chamber.org | +254 712 345 678</p>
+
+        <p>
+        © <span id="year"></span> Elizabeth Njoroge
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+</body>
+</html>
