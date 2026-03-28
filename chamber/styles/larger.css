@@ -26,17 +26,24 @@
 }
 
 /* join page layout*/
+/* ===============================
+   LARGE SCREENS
+   =============================== */
+
 @media screen and (min-width: 768px) {
     .join-page-container {
         flex-direction: row;
         align-items: flex-start;
     }
 
-    form {
+    .join-page-container form {
         flex: 2;
     }
 
-    .membership-cards {
+    .join-page-container .membership-cards {
         flex: 1;
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
     }
 }
