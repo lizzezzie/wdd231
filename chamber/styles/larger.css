@@ -24,3 +24,19 @@
     }
 
 }
+
+/* join page layout*/
+@media screen and (min-width: 768px) {
+    .join-page-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    form {
+        flex: 2;
+    }
+
+    .membership-cards {
+        flex: 1;
+    }
+}

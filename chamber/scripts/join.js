@@ -31,6 +31,32 @@ cards.forEach(card => {
             radio.checked = true;
         }
     });
+    cards.forEach(card => {
+    card.addEventListener("click", () => {
+
+        // remove selection from all cards
+        cards.forEach(c => c.classList.remove("selected"));
+
+        // add to clicked one
+        card.classList.add("selected");
+
+        const level = card.dataset.modal.replace("-modal", "");
+        const radio = document.querySelector(`input[value="${level}"]`);
+        if (radio) {
+            radio.checked = true;
+        }
+    });
+    // Animate cards on load
+        window.addEventListener("load", () => {
+            const cards = document.querySelectorAll(".card");
+
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("show");
+                }, index * 200); // stagger effect
+            });
+});
+});
 });
 
 
