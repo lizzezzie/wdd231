@@ -46,4 +46,7 @@
         border-top: none;
         padding-top: 0;
     }
+    #menuBtn {
+        display: none;
+    }
 }

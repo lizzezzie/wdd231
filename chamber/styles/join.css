@@ -1,6 +1,81 @@
-/* ===============================
-   JOIN PAGE ONLY STYLES
-   =============================== */
+:root {
+    --primary-color: #041933;
+    --secondary-color: #21384d;
+    --background-color: #e5e7e8;
+    --text-color: #212529;
+}
+
+/* Base */
+body {
+    font-family: roboto, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Header */
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+/* Navigation */
+
+nav {
+    margin-top: .5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: .75rem;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+/* Active page indicator */
+
+nav a.active {
+    background-color: #06d9c0;
+    color: black;
+    font-weight: bold;
+}
+
+/* Menu Button */
+
+#menuBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* Mobile Menu */
+
+#navLinks {
+    display: none;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+
+#navLinks.show {
+    display: flex;
+}
+
+
 
 .join-page-container {
     display: flex;
@@ -145,4 +220,12 @@
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
+}
+/* Footer */
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
