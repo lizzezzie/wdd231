@@ -99,14 +99,14 @@ nav {
 
 .join-page-container {
     display: flex;
-    grid-template-columns: 200px 1fr;
-    gap: 1rem 1.5rem;
-    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
 }
 
 /* FORM */
 .join-page-container form {
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
@@ -121,6 +121,7 @@ nav {
 
 .join-page-container legend {
     font-weight: bold;
+    font-size: larger;
     margin-bottom: 0.5rem;
 }
 .join-page-container label {

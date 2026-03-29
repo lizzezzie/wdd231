@@ -11,21 +11,14 @@
         display: none;
     }
 
-    /* MAIN GRID */
-    main {
+    .join-page-container {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        gap: 1rem;
-    }
-
-
-    .join-page-container {
-        flex-direction: row;
-        align-items: flex-start;
+        gap: 2rem;
+        align-items: start;
     }
 
     .join-page-container form {
-        flex: 1;
         margin-top: 2rem;
     }
 
