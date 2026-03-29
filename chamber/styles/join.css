@@ -106,13 +106,19 @@ nav {
 
 /* FORM */
 .join-page-container form {
-    display: flex;
-    flex-direction: column;
+    display: grid; 
+    flex-direction: column; 
     gap: 1.2rem;
 }
 
-/* FIELDSET */
 
+/* FIELDSET */
+.join-page-container fieldset {
+   border: 1px solid #ccc; 
+   padding: 1rem; 
+   border-radius: 8px; 
+   background-color: #fefbfb;
+}
 
 .join-page-container legend {
     font-weight: bold;
@@ -131,6 +137,7 @@ nav {
     flex-direction: column;
     align-items: flex-start;
     font-weight: 500;
+    gap: 0.3rem;
 }
 
 /* INPUTS */
@@ -150,9 +157,25 @@ nav {
     min-height: 100px;
 }
 
+/*  Membership section  */
+.join-page-container .membership {
+    max-width: 500px;
+    margin-bottom: 1rem;
+}
+
+/* each option */
+.join-page-container .membership label {
+    display: flex;
+}
+
+/* radio buttons */
+.join-page-container .membership input[type="radio"] {
+    max-width: 0.5rem;
+}
+
 /* RADIO GROUP */
 .join-page-container fieldset label {
-    display: flex;
+    display: block;
     align-items: center;
     gap: 0.5rem;
     cursor: pointer
@@ -207,8 +230,26 @@ nav {
 
 .join-page-container .card a {
     display: inline-block;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.8rem;
+
+    background-color: #b7daf4;
+    color: #000000;
+    text-decoration: none;
+
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.join-page-container .card a:hover {
+    background-color: #3ea3ec;
+    transform: translateY(-2px);
+}
+.join-page-container .card[data-modal="gold-modal"] a {
+    background-color: gold;
+    color: black;
 }
 
 /* Highlight Gold */
@@ -256,7 +297,6 @@ nav {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
-
 /* Footer */
 
 footer {
