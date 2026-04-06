@@ -2,33 +2,47 @@ import { places } from "../data/places.mjs";
 
 const showHere = document.querySelector("#discover-cards");
 
-function displayItemss(places) {
-    places.forEach(place => {
-        const theCard = document.createElement("div");
-        const theImage = document.createElement("img");
-        theImage.src = place.photo_url;
-        theImage.alt = place.name;
-        theCard.appendChild(theImage);
-        const theName = document.createElement("h2");
-        theName.textContent = place.name;
-        theName.innerText = place.name;
-        theCard.appendChild(theName);
-        const theAddress = document.createElement("p");
-        theAddress.textContent = place.address;
-        theAddress.innerText = place.address;
-        theCard.appendChild(theAddress);
-        const theCost = document.createElement("p");
-        theCost.textContent = `Cost: ${place.cost_kes}`;
-        theCost.innerText = `Cost: ${place.cost_kes}`;
-        theCard.appendChild(theCost);
-        const theDescription = document.createElement("p");
-        theDescription.textContent = place.description;
-        theDescription.innerText = place.description;
-        theCard.appendChild(theDescription);
+function displayItems(places) {
+    places.forEach((place) => {
 
-        showHere.appendChild(theCard);
+        // CARD
+        const card = document.createElement("article");
+        card.classList.add("card");
 
+        // TITLE
+        const name = document.createElement("h2");
+        name.textContent = place.name;
 
+        // IMAGE inside FIGURE
+        const figure = document.createElement("figure");
+        const image = document.createElement("img");
+        image.src = `images/${place.photo_url}`;
+        image.alt = place.name;
+        image.loading = "lazy";
+
+        figure.appendChild(image);
+
+        // ADDRESS (required tag)
+        const address = document.createElement("address");
+        address.textContent = place.address;
+
+        // DESCRIPTION
+        const description = document.createElement("p");
+        description.textContent = place.description;
+
+        // BUTTON (required)
+        const button = document.createElement("button");
+        button.textContent = "Learn More";
+
+        // APPEND EVERYTHING
+        card.appendChild(name);
+        card.appendChild(figure);
+        card.appendChild(address);
+        card.appendChild(description);
+        card.appendChild(button);
+
+        showHere.appendChild(card);
     });
 }
-displayItemss(places);
+
+displayItems(places);
