@@ -34,9 +34,14 @@ function displayItems(places) {
         const description = document.createElement("p");
         description.textContent = place.description;
 
-        // BUTTON (required)
+        // BUTTON TO LEARN MORE
         const button = document.createElement("button");
+        button.setAttribute("aria-label", `Learn more about ${place.name}`);
         button.textContent = "Learn More";
+
+        button.addEventListener("click", () => {
+            alert(`More information about ${place.name} coming soon!`);
+    });
 
         // APPEND EVERYTHING
         card.appendChild(name);
