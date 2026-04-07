@@ -40,7 +40,7 @@
       "address": "Langata Rd, Nairobi, Kenya",
       "cost_kes": "600 - 2000",
       "description": "A cultural center featuring traditional dances, music, and homesteads representing various Kenyan communities.",
-      "photo_url": "bomas_of_kenya.webp"
+      "photo_url": "bomas-of-kenya.webp"
     },
     {
       "name": "Maasai Market",
