@@ -68,5 +68,146 @@
     ],
     "reflection": "What is one small health habit I can start today?",
     "tags": ["fitness", "routine"]
+  },
+  {
+    "id": 6,
+    "title": "Managing Stress Effectively",
+    "category": "health",
+    "quickInsight": "Stress is a signal, not a problem to solve.",
+    "meaning": "Stress indicates that something needs attention. Instead of trying to eliminate it, we can learn to manage it better.",
+    "actionSteps": [
+      "Identify the source of stress",
+      "Practice deep breathing",
+      "Take short breaks when needed"
+    ],
+    "reflection": "What is causing me stress right now?",
+    "tags": ["stress", "management"]
+  },
+  {
+    "id": 7,
+    "title": "Cultivating Gratitude",
+    "category": "emotional",
+    "quickInsight": "Gratitude shifts your focus to what you have, not what you lack.",
+    "meaning": "Practicing gratitude can improve emotional wellbeing by helping you appreciate the positive aspects of your life.",
+    "actionSteps": [
+      "Write down three things you are grateful for each day",
+      "Express gratitude to someone else",
+      "Reflect on positive experiences regularly"
+    ],
+    "reflection": "What am I grateful for today?",
+    "tags": ["gratitude", "positivity"]
+  },
+  {
+    "id": 8,
+    "title": "Embracing Failure",
+    "category": "growth",
+    "quickInsight": "Failure is a stepping stone to success.",
+    "meaning": "Failure provides valuable lessons and opportunities for growth. Embracing it can lead to greater resilience and achievement.",
+    "actionSteps": [
+      "Reflect on what went wrong",
+      "Identify lessons learned",
+      "Plan your next steps"
+    ],
+    "reflection": "What can I learn from my recent failures?",
+    "tags": ["failure", "resilience"]
+  },
+  {
+    "id": 9,
+    "title": "Improving Sleep Quality",
+    "category": "health",
+    "quickInsight": "Good sleep is the foundation of good health.",
+    "meaning": "Quality sleep is essential for physical and mental wellbeing. It helps your body recover and your mind function optimally.",
+    "actionSteps": [
+      "Establish a consistent bedtime routine",
+      "Limit screen time before bed",
+      "Create a comfortable sleep environment"
+    ],
+    "reflection": "How can I improve my sleep habits?",
+    "tags": ["sleep", "wellbeing"]
+  },
+  {
+    "id": 10,
+    "title": "Building Emotional Resilience",
+    "category": "emotional",
+    "quickInsight": "Resilience is built through facing challenges, not avoiding them.",
+    "meaning": "Emotional resilience allows you to bounce back from adversity. It develops through experience and reflection on difficult situations.",
+    "actionSteps": [
+      "Face challenges head-on",
+      "Seek support when needed",
+      "Reflect on how you overcame past difficulties"
+    ],
+    "reflection": "How have I grown stronger from past challenges?",
+    "tags": ["resilience", "growth"]
+  },
+  {
+    "id": 11,
+    "title": "Finding Purpose",
+    "category": "growth",
+    "quickInsight": "Purpose gives meaning to your actions.",
+    "meaning": "Having a sense of purpose can motivate you and provide direction in life. It helps you focus on what truly matters.",
+    "actionSteps": [
+      "Identify your core values",
+      "Set goals aligned with those values",
+      "Reflect on what brings you fulfillment"
+    ],
+    "reflection": "What is my purpose in life?",
+    "tags": ["purpose", "motivation"]
+  },
+  {
+    "id": 12,
+    "title": "Maintaining Physical Health",
+    "category": "health",
+    "quickInsight": "Your body is your most valuable asset.",
+    "meaning": "Taking care of your physical health is essential for overall wellbeing. It allows you to live a longer, more fulfilling life.",
+    "actionSteps": [
+      "Eat a balanced diet",
+      "Exercise regularly",
+      "Schedule regular health check-ups"
+    ],
+    "reflection": "Am I taking good care of my body?",
+    "tags": ["health", "fitness"]
+  },
+  {
+    "id": 13,
+    "title": "Practicing Mindfulness",
+    "category": "emotional",
+    "quickInsight": "Mindfulness helps you stay present and reduce stress.",
+    "meaning": "Being mindful allows you to focus on the current moment, which can improve emotional regulation and reduce anxiety.",
+    "actionSteps": [
+      "Set aside time for mindfulness meditation",
+      "Focus on your breath during stressful moments",
+      "Engage in activities that promote mindfulness, like yoga or nature walks"
+    ],
+    "reflection": "How can I incorporate mindfulness into my daily routine?",
+    "tags": ["mindfulness", "stress reduction"]
+  },
+  {
+    "id": 14,
+    "title": "Enhancing Creativity",
+    "category": "growth",
+    "quickInsight": "Creativity thrives in a curious and open mind.",
+    "meaning": "Cultivating creativity can lead to innovative ideas and solutions. It often requires stepping outside of your comfort zone and embracing new experiences.",
+    "actionSteps": [
+      "Try new activities or hobbies",
+      "Collaborate with others",
+      "Allow yourself to make mistakes and learn from them"
+    ],
+    "reflection": "What can I do to boost my creativity?",
+    "tags": ["creativity", "innovation"]
+  },
+  {
+    "id": 15,
+    "title": "Building Strong Relationships",
+    "category": "emotional",
+    "quickInsight": "Healthy relationships are built on trust and communication.",
+    "meaning": "Strong relationships contribute to emotional wellbeing. They require effort, understanding, and mutual respect.",
+    "actionSteps": [
+      "Communicate openly with loved ones",
+      "Show appreciation and support",
+      "Address conflicts calmly and respectfully"
+    ],
+    "reflection": "How can I strengthen my relationships?",
+    "tags": ["relationships", "communication"]
   }
+
 ]
