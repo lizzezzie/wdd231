@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "When You Feel Overwhelmed",
+    "category": "emotional",
+    "quickInsight": "You don’t have to solve everything at once. Start small.",
+    "meaning": "Overwhelm often comes from trying to manage too many thoughts and responsibilities at once. It creates mental pressure that makes even simple tasks feel difficult.",
+    "actionSteps": [
+      "Write down everything on your mind",
+      "Choose one small task to focus on",
+      "Ignore everything else until it is done"
+    ],
+    "reflection": "What is one small thing I can handle right now?",
+    "tags": ["stress", "anxiety"]
+  },
+  {
+    "id": 2,
+    "title": "Handling Emotional Burnout",
+    "category": "emotional",
+    "quickInsight": "Rest is not weakness. It is necessary recovery.",
+    "meaning": "Burnout happens when you push yourself without giving your mind and body time to recover. Ignoring it only makes it worse.",
+    "actionSteps": [
+      "Take a break from demanding tasks",
+      "Get proper sleep",
+      "Limit unnecessary responsibilities"
+    ],
+    "reflection": "Have I been giving myself enough rest?",
+    "tags": ["burnout", "rest"]
+  },
+  {
+    "id": 3,
+    "title": "Building Discipline",
+    "category": "growth",
+    "quickInsight": "Consistency matters more than motivation.",
+    "meaning": "Motivation comes and goes, but discipline is built through repeated action. Small consistent efforts create long-term results.",
+    "actionSteps": [
+      "Set one daily habit",
+      "Stick to it even when you don’t feel like it",
+      "Track your progress"
+    ],
+    "reflection": "What habit can I commit to daily?",
+    "tags": ["discipline", "habits"]
+  },
+  {
+    "id": 4,
+    "title": "Overcoming Procrastination",
+    "category": "growth",
+    "quickInsight": "Start before you feel ready.",
+    "meaning": "Waiting for the perfect moment often leads to delay. Taking action reduces fear and builds momentum.",
+    "actionSteps": [
+      "Start with the easiest part",
+      "Set a short timer",
+      "Focus only on beginning"
+    ],
+    "reflection": "What have I been delaying unnecessarily?",
+    "tags": ["focus", "productivity"]
+  },
+  {
+    "id": 5,
+    "title": "Starting a Healthy Routine",
+    "category": "health",
+    "quickInsight": "Simple habits create lasting change.",
+    "meaning": "Health is not built in one day. It develops through small, consistent habits over time.",
+    "actionSteps": [
+      "Drink more water daily",
+      "Move your body regularly",
+      "Get enough sleep"
+    ],
+    "reflection": "What is one small health habit I can start today?",
+    "tags": ["fitness", "routine"]
+  }
+]
