@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore Insights | Personal Growth Knowledge Explorer</title>
+
+    <meta name="description" content="Explore insights on emotional wellbeing, personal growth, and physical health.">
+    <meta name="author" content="Elizabeth Njoroge">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Explore Insights">
+    <meta property="og:description" content="Browse and discover meaningful guidance for growth.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Insights</h1>
+
+    <nav>
+        <button id="menu-btn" aria-label="Open navigation menu">☰</button>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="reflect.html">Reflect</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- FILTER CONTROLS -->
+    <section class="filters">
+        <h2>Filter by Category</h2>
+
+        <div class="filter-buttons">
+            <button data-category="all">All</button>
+            <button data-category="emotional">Emotional Wellbeing</button>
+            <button data-category="growth">Personal Growth</button>
+            <button data-category="health">Physical Health</button>
+        </div>
+    </section>
+
+    <!-- CONTENT GRID -->
+    <section class="content">
+        <h2>Insights</h2>
+
+        <div id="card-container">
+            <!-- JS will inject 15+ items here -->
+        </div>
+    </section>
+
+</main>
+
+<!-- MODAL (hidden by default) -->
+<div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+
+        <button id="close-modal" aria-label="Close dialog">✖</button>
+
+        <h2 id="modal-title"></h2>
+
+        <p id="modal-insight"></p>
+
+        <div id="modal-details">
+            <!-- dynamic sections -->
+        </div>
+
+        <button id="save-btn">Save Insight</button>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Personal Growth Knowledge Explorer</p>
+    <p><a href="attributions.html">Attributions</a></p>
+    <p><a href="#">Project Demo Video</a></p>
+</footer>
+
+<!-- JS (module will come later) -->
+<script type="module" src="scripts/explore.js"></script>
+
+</body>
+</html>
