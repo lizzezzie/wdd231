@@ -1,7 +1,17 @@
-// explore.js
-// URL to the insights JSON file
-const url = "../data/insights.json";
+// URL to JSON
+const url = "./data/insights.json";
 
+// DOM elements
+const container = document.querySelector("#card-container");
+const modal = document.querySelector("#modal");
+const modalTitle = document.querySelector("#modal-title");
+const modalInsight = document.querySelector("#modal-insight");
+const modalDetails = document.querySelector("#modal-details");
+const closeModalBtn = document.querySelector("#close-modal");
+
+let allInsights = [];
+
+// FETCH DATA
 async function getInsights() {
     try {
         const response = await fetch(url);
@@ -11,6 +21,9 @@ async function getInsights() {
         }
 
         const data = await response.json();
+        console.log(data); // Debugging log
+        allInsights = data; // Store data for filtering
+
         displayInsights(data);
 
     } catch (error) {
@@ -18,19 +31,8 @@ async function getInsights() {
     }
 }
 
-
-// DOM elements
-const modal = document.querySelector("#modal");
-const modalTitle = document.querySelector("#modal-title");
-const modalInsight = document.querySelector("#modal-insight");
-const modalDetails = document.querySelector("#modal-details");
-const closeModalBtn = document.querySelector("#close-modal");
-
-// Container for insights
-let allInsights = [];
-
+// DISPLAY CARDS
 function displayInsights(insights) {
-    allInsights = insights; // store globally
 
     container.innerHTML = "";
 
@@ -48,9 +50,20 @@ function displayInsights(insights) {
     });
 }
 
-// Open modal with detailed insight
+// EVENT DELEGATION
+container.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+        const id = parseInt(e.target.dataset.id);
+        openModal(id);
+    }
+});
+
+// MODAL
 function openModal(id) {
     const item = allInsights.find(i => i.id === id);
+    if (!item) return;
+
+    currentInsight = item;
 
     modalTitle.textContent = item.title;
     modalInsight.textContent = item.quickInsight;
@@ -66,6 +79,26 @@ function openModal(id) {
     modal.setAttribute("aria-hidden", "false");
 }
 
+// CLOSE MODAL
 closeModalBtn.addEventListener("click", () => {
     modal.setAttribute("aria-hidden", "true");
+});
+
+// INIT
+getInsights();
+
+// FILTER BUTTONS
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const category = button.dataset.category;
+
+        if (category === "all") {
+            displayInsights(allInsights);
+        } else {
+            const filtered = allInsights.filter(item => item.category === category);
+            displayInsights(filtered);
+        }
+    });
 });
