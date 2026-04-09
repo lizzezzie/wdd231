@@ -153,5 +153,6 @@ function loadSavedInsights() {
         savedContainer.appendChild(card);
     });
 }
+// Initial load of saved insights
 loadSavedInsights();
 
