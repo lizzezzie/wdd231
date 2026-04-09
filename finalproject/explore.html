@@ -58,24 +58,32 @@
 
 </main>
 
-<!-- MODAL (hidden by default) -->
-<div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-content">
+    <!-- MODAL (hidden by default) -->
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
 
-        <button id="close-modal" aria-label="Close dialog">✖</button>
+            <button id="close-modal" aria-label="Close dialog">✖</button>
 
-        <h2 id="modal-title"></h2>
+            <h2 id="modal-title"></h2>
 
-        <p id="modal-insight"></p>
+            <p id="modal-insight"></p>
 
-        <div id="modal-details">
-            <!-- dynamic sections -->
+            <div id="modal-details">
+                <!-- dynamic sections -->
+            </div>
+
+            <button id="save-btn">Save Insight</button>
+
         </div>
-        
-        <button id="save-btn">Save Insight</button>
-
     </div>
-</div>
+
+    <section class="saved">
+        <h2>Saved Insights</h2>
+
+        <div id="saved-container">
+            <p>No saved insights yet.</p>
+        </div>
+    </section>
 
 <footer>
     <p>&copy; 2026 Personal Growth Knowledge Explorer</p>
