@@ -10,6 +10,7 @@ const modalDetails = document.querySelector("#modal-details");
 const closeModalBtn = document.querySelector("#close-modal");
 
 let allInsights = [];
+let currentInsight = null;
 
 // FETCH DATA
 async function getInsights() {
@@ -63,7 +64,7 @@ function openModal(id) {
     const item = allInsights.find(i => i.id === id);
     if (!item) return;
 
-    currentInsight = item;
+    currentInsight = item; // Store current insight for saving
 
     modalTitle.textContent = item.title;
     modalInsight.textContent = item.quickInsight;
@@ -121,4 +122,5 @@ saveBtn.addEventListener("click", () => {
     } else {
         alert("Already saved.");
     }
+
 });
