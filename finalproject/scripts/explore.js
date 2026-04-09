@@ -102,3 +102,23 @@ filterButtons.forEach(button => {
         }
     });
 });
+
+// SAVE INSIGHT
+const saveBtn = document.querySelector("#save-btn");
+
+saveBtn.addEventListener("click", () => {
+    if (!currentInsight) return;
+
+    let saved = JSON.parse(localStorage.getItem("savedInsights")) || [];
+
+    // prevent duplicates
+    const exists = saved.some(item => item.id === currentInsight.id);
+
+    if (!exists) {
+        saved.push(currentInsight);
+        localStorage.setItem("savedInsights", JSON.stringify(saved));
+        alert("Insight saved!");
+    } else {
+        alert("Already saved.");
+    }
+});
