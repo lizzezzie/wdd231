@@ -115,12 +115,15 @@ saveBtn.addEventListener("click", () => {
     // prevent duplicates
     const exists = saved.some(item => item.id === currentInsight.id);
 
+    // ✅ Call this after saving to refresh the saved insights list
     if (!exists) {
         saved.push(currentInsight);
         localStorage.setItem("savedInsights", JSON.stringify(saved));
         alert("Insight saved!");
+
+        loadSavedInsights(); // ✅ refresh UI
     } else {
-        alert("Already saved.");
+        saveBtn.textContent = "Already Saved";
     }
 
 });
@@ -152,11 +155,3 @@ function loadSavedInsights() {
 }
 loadSavedInsights();
 
-// ✅ Call this after saving to refresh the saved insights list
-if (!exists) {
-    saved.push(currentInsight);
-    localStorage.setItem("savedInsights", JSON.stringify(saved));
-    alert("Insight saved!");
-
-    loadSavedInsights(); // ✅ refresh UI
-}
