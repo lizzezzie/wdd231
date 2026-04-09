@@ -124,3 +124,39 @@ saveBtn.addEventListener("click", () => {
     }
 
 });
+
+// LOAD SAVED INSIGHTS
+const savedContainer = document.querySelector("#saved-container");
+
+function loadSavedInsights() {
+    const saved = JSON.parse(localStorage.getItem("savedInsights")) || [];
+
+    savedContainer.innerHTML = "";
+
+    if (saved.length === 0) {
+        savedContainer.innerHTML = "<p>No saved insights yet.</p>";
+        return;
+    }
+
+    saved.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <h3>${item.title}</h3>
+            <p>${item.quickInsight}</p>
+        `;
+
+        savedContainer.appendChild(card);
+    });
+}
+loadSavedInsights();
+
+// ✅ Call this after saving to refresh the saved insights list
+if (!exists) {
+    saved.push(currentInsight);
+    localStorage.setItem("savedInsights", JSON.stringify(saved));
+    alert("Insight saved!");
+
+    loadSavedInsights(); // ✅ refresh UI
+}
