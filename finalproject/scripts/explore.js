@@ -18,42 +18,15 @@ async function getInsights() {
     }
 }
 
-// Call the function to fetch and display insights on page load
-getInsights();
 
-const container = document.querySelector("#card-container");
-
-function displayInsights(insights) {
-    container.innerHTML = "";
-
-    insights.forEach(item => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-
-        card.innerHTML = `
-            <h3>${item.title}</h3>
-            <p>${item.quickInsight}</p>
-            <button data-id="${item.id}">Read More</button>
-        `;
-
-        container.appendChild(card);
-    });
-}
-
-// Event delegation for dynamically created buttons
-container.addEventListener("click", (e) => {
-    if (e.target.tagName === "BUTTON") {
-        const id = parseInt(e.target.dataset.id);
-        openModal(id);
-    }
-});
-
+// DOM elements
 const modal = document.querySelector("#modal");
 const modalTitle = document.querySelector("#modal-title");
 const modalInsight = document.querySelector("#modal-insight");
 const modalDetails = document.querySelector("#modal-details");
 const closeModalBtn = document.querySelector("#close-modal");
 
+// Container for insights
 let allInsights = [];
 
 function displayInsights(insights) {
