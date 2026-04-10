@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflect | Knowledge Explorer</title>
+
+    <meta name="description" content="Reflect on your emotional wellbeing, growth, and health.">
+    <meta name="author" content="Elizabeth Njoroge">
+
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Knowledge Explorer</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="reflect.html">Reflect</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="form-section">
+        <h2>Personal Reflection</h2>
+        <p>Take a moment to reflect on where you are and what you need.</p>
+
+        <form action="thankyou.html" method="get">
+
+            <!-- Name -->
+            <label for="name">
+                Your Name
+                <input type="text" id="name" name="name" required>
+            </label>
+
+            <!-- Email -->
+            <label for="email">
+                Email
+                <input type="email" id="email" name="email" required>
+            </label>
+
+            <!-- Category -->
+            <label for="focus">
+                What area do you want to focus on?
+                <select id="focus" name="focus" required>
+                    <option value="">Select an option</option>
+                    <option value="emotional">Emotional Wellbeing</option>
+                    <option value="growth">Personal Growth</option>
+                    <option value="health">Physical Health</option>
+                </select>
+            </label>
+
+            <!-- Reflection -->
+            <label for="reflection">
+                What are you currently struggling with?
+                <textarea id="reflection" name="reflection" rows="4" required></textarea>
+            </label>
+
+            <!-- Goal -->
+            <label for="goal">
+                What is one small step you can take?
+                <textarea id="goal" name="goal" rows="3" required></textarea>
+            </label>
+
+            <!-- Submit -->
+            <button type="submit">Submit Reflection</button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Knowledge Explorer</p>
+</footer>
+
+</body>
+</html>

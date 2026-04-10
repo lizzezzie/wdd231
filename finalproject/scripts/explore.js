@@ -3,16 +3,23 @@ const url = "./data/insights.json";
 
 // DOM elements
 const container = document.querySelector("#card-container");
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+
 const modal = document.querySelector("#modal");
 const modalTitle = document.querySelector("#modal-title");
 const modalInsight = document.querySelector("#modal-insight");
 const modalDetails = document.querySelector("#modal-details");
 const closeModalBtn = document.querySelector("#close-modal");
+const saveBtn = document.querySelector("#save-btn");
 
+const savedContainer = document.querySelector("#saved-container");
+
+// STATE
 let allInsights = [];
 let currentInsight = null;
+let lastFocusedElement = null;
 
-// FETCH DATA
+// ================= FETCH =================
 async function getInsights() {
     try {
         const response = await fetch(url);
@@ -22,9 +29,9 @@ async function getInsights() {
         }
 
         const data = await response.json();
-        console.log(data); // Debugging log
-        allInsights = data; // Store data for filtering
+        console.log(data);
 
+        allInsights = data;
         displayInsights(data);
 
     } catch (error) {
@@ -32,9 +39,8 @@ async function getInsights() {
     }
 }
 
-// DISPLAY CARDS
+// ================= DISPLAY =================
 function displayInsights(insights) {
-
     container.innerHTML = "";
 
     insights.forEach(item => {
@@ -51,46 +57,7 @@ function displayInsights(insights) {
     });
 }
 
-// EVENT DELEGATION
-container.addEventListener("click", (e) => {
-    if (e.target.tagName === "BUTTON") {
-        const id = parseInt(e.target.dataset.id);
-        openModal(id);
-    }
-});
-
-// MODAL
-function openModal(id) {
-    const item = allInsights.find(i => i.id === id);
-    if (!item) return;
-
-    currentInsight = item; // Store current insight for saving
-
-    modalTitle.textContent = item.title;
-    modalInsight.textContent = item.quickInsight;
-
-    modalDetails.innerHTML = `
-        <p><strong>Meaning:</strong> ${item.meaning}</p>
-        <ul>
-            ${item.actionSteps.map(step => `<li>${step}</li>`).join("")}
-        </ul>
-        <p><strong>Reflection:</strong> ${item.reflection}</p>
-    `;
-
-    modal.setAttribute("aria-hidden", "false");
-}
-
-// CLOSE MODAL
-closeModalBtn.addEventListener("click", () => {
-    modal.setAttribute("aria-hidden", "true");
-});
-
-// INIT
-getInsights();
-
-// FILTER BUTTONS
-const filterButtons = document.querySelectorAll(".filter-buttons button");
-
+// ================= FILTER =================
 filterButtons.forEach(button => {
     button.addEventListener("click", () => {
         const category = button.dataset.category;
@@ -104,33 +71,84 @@ filterButtons.forEach(button => {
     });
 });
 
-// SAVE INSIGHT
-const saveBtn = document.querySelector("#save-btn");
+// ================= EVENT DELEGATION =================
+container.addEventListener("click", (e) => {
+    if (e.target.tagName === "BUTTON") {
+        const id = parseInt(e.target.dataset.id);
+        openModal(id);
+    }
+});
 
+// ================= MODAL =================
+function openModal(id) {
+    const item = allInsights.find(i => i.id === id);
+    if (!item) return;
+
+    currentInsight = item;
+    lastFocusedElement = document.activeElement;
+
+    modalTitle.textContent = item.title;
+    modalInsight.textContent = item.quickInsight;
+
+    modalDetails.innerHTML = `
+        <p><strong>Meaning:</strong> ${item.meaning}</p>
+        <ul>
+            ${item.actionSteps.map(step => `<li>${step}</li>`).join("")}
+        </ul>
+        <p><strong>Reflection:</strong> ${item.reflection}</p>
+    `;
+
+    saveBtn.textContent = "Save Insight";
+
+    modal.setAttribute("aria-hidden", "false");
+    closeModalBtn.focus();
+}
+
+function closeModal() {
+    modal.setAttribute("aria-hidden", "true");
+
+    if (lastFocusedElement) {
+        lastFocusedElement.focus();
+    }
+}
+
+// Close button
+closeModalBtn.addEventListener("click", closeModal);
+
+// Click outside
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+// ESC key
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        closeModal();
+    }
+});
+
+// ================= SAVE =================
 saveBtn.addEventListener("click", () => {
     if (!currentInsight) return;
 
     let saved = JSON.parse(localStorage.getItem("savedInsights")) || [];
 
-    // prevent duplicates
     const exists = saved.some(item => item.id === currentInsight.id);
 
-    // ✅ Call this after saving to refresh the saved insights list
     if (!exists) {
         saved.push(currentInsight);
         localStorage.setItem("savedInsights", JSON.stringify(saved));
-        alert("Insight saved!");
 
-        loadSavedInsights(); // ✅ refresh UI
+        saveBtn.textContent = "Saved!";
+        loadSavedInsights();
     } else {
         saveBtn.textContent = "Already Saved";
     }
-
 });
 
-// LOAD SAVED INSIGHTS
-const savedContainer = document.querySelector("#saved-container");
-
+// ================= LOAD SAVED =================
 function loadSavedInsights() {
     const saved = JSON.parse(localStorage.getItem("savedInsights")) || [];
 
@@ -153,6 +171,7 @@ function loadSavedInsights() {
         savedContainer.appendChild(card);
     });
 }
-// Initial load of saved insights
-loadSavedInsights();
 
+// ================= INIT =================
+getInsights();
+loadSavedInsights();
