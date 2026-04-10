@@ -123,3 +123,63 @@ button {
 button:hover {
     opacity: 0.9;
 }
+
+/*========== THANK YOU PAGE ========= */
+/* REUSE FORM STYLES FOR DISPLAY */
+.thankyou-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.thankyou-section h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.thankyou-section .intro {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+/* DYNAMIC CONTENT */
+.thankyou-section h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+.thankyou-section p {
+    line-height: 1.6;
+}
+/* REFLECTION & GOAL STYLES */
+#reflection,
+#goal {
+    background: #f9fafb;
+    padding: 1rem;
+    border-left: 4px solid var(--accent);
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+/* FOCUS AREA STYLE */
+#focus {
+    font-weight: 600;
+    color: var(--primary);
+}
+/* BACK TO EXPLORE LINK */
+.thankyou-section a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.thankyou-section a:hover {
+    background: var(--accent);
+}
