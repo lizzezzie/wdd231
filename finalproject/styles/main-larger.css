@@ -19,8 +19,8 @@
         text-decoration: underline;
     }
     /* MAIN CONTENT */
-    .category-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .category-card {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 }
 
