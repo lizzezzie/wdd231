@@ -296,11 +296,12 @@ button:hover {
 #modal {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     display: none;
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    z-index: 1000;
 }
 
 /* SHOW MODAL */
@@ -312,15 +313,22 @@ button:hover {
 .modal-content {
     background: white;
     padding: 2rem;
-    border-radius: 10px;
-    max-width: 500px;
+    border-radius: 12px;
+    max-width: 550px;
     width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 /* MODAL TEXT */
 .modal-content h3 {
     color: var(--primary);
     margin-bottom: 0.5rem;
+}
+#modal-insight {
+    font-style: italic;
+    color: #444;
+    margin-bottom: 1rem;
 }
 
 .modal-content p {
@@ -337,18 +345,22 @@ button:hover {
 .modal-content li {
     margin-bottom: 0.5rem;
 }
+/* HIGHLIGHTED TEXT */
+.modal-content strong {
+    color: var(--primary);
+}
 
 /* CLOSE BUTTON */
 #close-modal {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     background: var(--primary);
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 6px;
     cursor: pointer;
 }
 
 #close-modal:hover {
-    opacity: 0.9;
+    background-color: var(--highlight);
 }
