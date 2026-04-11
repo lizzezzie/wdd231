@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+
+    #menu-btn {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        background: none;
+        padding: 0;
+        gap: 1.5rem;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+    .navigation a:hover {
+    text-decoration: underline;
+}
+}

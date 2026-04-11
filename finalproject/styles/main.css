@@ -32,14 +32,58 @@ header {
     background: var(--primary);
     color: white;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* LOGO */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+/* Title */
+header h1 {
+    margin: 0;
 }
 
 /* NAVIGATION */
 nav {
-    margin-top: 0.5rem;
+    position: relative;
+}
+/* MENU BUTTON (for smaller screens) */
+#menu-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* NAV LIST (hidden by default) */
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    
+    position: absolute;
+    right: 0;
+    top: 60px;
+
+    background: var(--primary);
+    border-radius: 8px;
+
+    display: none;
+}
+/* SHOW MENU */
+.navigation.open {
+    display: block;
 }
 
+/* LINKS */
+.navigation li {
+    margin-bottom: 0.5rem;
+}
+/* NAV LINKS */
 nav a {
     color: white;
     text-decoration: none;
