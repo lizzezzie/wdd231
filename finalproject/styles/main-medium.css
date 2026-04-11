@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+
+    #menu-btn {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        background: none;
+        padding: 0;
+        gap: 1.5rem;
+    }
+
+    .navigation li {
+        margin: 0;
+    }
+     .navigation a:hover {
+        text-decoration: underline;
+    }
+    /* HERO SECTION */
+    .hero {
+        padding: 4rem 2rem;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+    /* CATEGORY CARDS */
+    .category-card {
+        padding: 2rem;
+    }
+   
+    .category-card h3 {
+        font-size: 1.5rem;
+    }
+    .category-card p {
+        font-size: 1.1rem;
+    }
+    .category-card a {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
+
+    /* DISCOVER GRID */
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+}

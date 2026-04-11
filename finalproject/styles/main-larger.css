@@ -1,27 +1,39 @@
-@media (min-width: 768px) {
+/* ========= LARGE SCREENS (1024px+) ========= */
+@media (min-width: 1024px) {
 
-    #menu-btn {
-        display: none;
-    }
-
-    .navigation {
-        display: flex;
-        position: static;
-        background: none;
-        padding: 0;
-        gap: 1.5rem;
+    /* ===== MAIN LAYOUT CONTAINER ===== */
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
     }
 
-    .navigation li {
-        margin: 0;
+    /* ===== HERO ===== */
+    .hero {
+        padding: 5rem 2rem;
     }
-    .navigation a:hover {
-        text-decoration: underline;
+
+    .hero h2 {
+        font-size: 2.6rem;
     }
-    /* HOME PAGE */
-    /* DISCOVER GRID */
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    /* ===== CATEGORY GRID ===== */
     .category-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* ===== CATEGORY CARDS ===== */
+    .category-card {
+        padding: 2rem;
+    }
+
+    /* ===== NAV SPACING ===== */
+    .navigation {
+        gap: 2rem;
     }
 
 }
