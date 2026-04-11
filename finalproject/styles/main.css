@@ -277,18 +277,7 @@ button:hover {
     padding: 1rem;
 }
 
-/* RESPONSIVE GRID */
-@media (min-width: 600px) {
-    #card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (min-width: 900px) {
-    #card-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
 
 /* ========= CARD ========= */
 .card {
