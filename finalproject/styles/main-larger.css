@@ -18,10 +18,12 @@
     .navigation a:hover {
         text-decoration: underline;
     }
-    /* MAIN CONTENT */
-    .category-card {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* HOME PAGE */
+    /* DISCOVER GRID */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 
