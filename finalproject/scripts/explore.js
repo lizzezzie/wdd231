@@ -14,6 +14,30 @@ const saveBtn = document.querySelector("#save-btn");
 
 const savedContainer = document.querySelector("#saved-container");
 
+
+// ================= FILTER =================
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        
+        // Remove active from all
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+
+        // Add active to clicked
+        button.classList.add("active");
+
+        // Get category
+        const category = button.dataset.category;
+
+        // Filter logic
+        if (category === "all") {
+            displayInsights(allInsights);
+        } else {
+            const filtered = allInsights.filter(item => item.category === category);
+            displayInsights(filtered);
+        }
+    });
+});
+
 // STATE
 let allInsights = [];
 let currentInsight = null;
