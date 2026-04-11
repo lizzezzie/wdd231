@@ -2,6 +2,9 @@
 const url = "./data/insights.json";
 
 // DOM elements
+const params = new URLSearchParams(window.location.search);
+const selectedCategory = params.get("category");
+
 const container = document.querySelector("#card-container");
 const filterButtons = document.querySelectorAll(".filter-buttons button");
 
@@ -56,7 +59,24 @@ async function getInsights() {
         console.log(data);
 
         allInsights = data;
-        displayInsights(data);
+
+        // Apply initial filter if category is in URL
+        if (selectedCategory) {
+            const filtered = data.filter(item => item.category === selectedCategory);
+            displayInsights(filtered);
+
+            // update active button
+            filterButtons.forEach(btn => {
+                btn.classList.remove("active");
+
+                if (btn.dataset.category === selectedCategory) {
+                    btn.classList.add("active");
+                }
+            });
+
+        } else {
+            displayInsights(data);
+        }
 
     } catch (error) {
         console.error("Error:", error);
