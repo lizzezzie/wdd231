@@ -11,7 +11,7 @@
     --accent: #043e37;      /* Teal */
     --highlight: #a44a37;   /* Burnt Orange */
     --background: #f9f7f2;  /* Light Gray */
-    --text: #202020;           /* Dark Gray */
+    --text: #202020;        /* Dark Gray */
 }
 
 /* BASE */
@@ -126,6 +126,7 @@ button:hover {
     opacity: 0.9;
     color: black;
 }
+
 /*========== THANK YOU PAGE =========*/
 
 .thankyou-section {
@@ -350,13 +351,4 @@ button:hover {
 
 #close-modal:hover {
     opacity: 0.9;
-}
-
-/* ========= FOOTER ========= */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: var(--primary);
-    color: white;
-    margin-top: 2rem;
 }
