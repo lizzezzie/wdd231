@@ -16,6 +16,12 @@
         margin: 0;
     }
     .navigation a:hover {
-    text-decoration: underline;
+        text-decoration: underline;
+    }
+    /* MAIN CONTENT */
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
-}
+
+
