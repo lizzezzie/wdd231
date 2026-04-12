@@ -35,21 +35,17 @@ main {
 header {
     background: var(--primary);
     color: white;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-/* LOGO */
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
 
 /* Title */
 header h1 {
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -100,10 +96,15 @@ nav a {
     margin: 0 10px;
     font-weight: 500;
 }
+.navigation .active {
+    font-weight: 600;
+    text-decoration: underline;
+}
 
 nav a:hover {
     color: var(--accent);
 }
+
 
 /* HERO SECTION */
 .hero {
@@ -177,11 +178,20 @@ nav a:hover {
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1.5rem;
+    margin-top: 3rem;
     font-size: 0.9rem;
-    color: #ccc;
+    color: white;
     background: var(--primary);
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-weight: 500;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 
 /*============== PAGE-SPECIFIC STYLES ==========*/
