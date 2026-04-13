@@ -8,7 +8,7 @@
 /* ROOT COLORS */
 :root {
     --primary: #07281a;     /* Deep Green */
-    --secondary: #14b8a6;   /* Vibrant Teal */
+    --secondary: #c0f98f;   /* Bright Lime Green */
     --accent: #043e37;      /* Teal */
     --highlight: #a44a37;   /* Burnt Orange */
     --background: #f9f7f2;  /* Light Gray */
@@ -56,27 +56,28 @@ nav {
 
 /* MENU BUTTON (for smaller screens) */
 #menu-btn {
-    background: transparent;
+    background: none;
     border: none;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     cursor: pointer;
 }
 #menu-btn:hover {
     color: var(--secondary);
+    transform: scale(1.2);
 }
 
 /* NAV LIST (hidden by default) */
 .navigation {
     list-style: none;
     margin: 0;
-    padding: 1rem;
+    padding: 1.5rem;
 
     position: absolute;
     right: 0;
     top: 60px;
 
-    background: var(--primary);
+    background: var(--accent);
     border-radius: 8px;
 
     display: none;
@@ -88,25 +89,22 @@ nav {
 
 }
 
-/* LINKS */
-.navigation li {
-    margin-bottom: 0.5rem;
-}
-
 /* NAV LINKS */
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
     font-weight: 500;
+    padding: 2px 8px;
 }
 .navigation .active {
     font-weight: 600;
-    text-decoration: underline;
+    background-color: var(--secondary);
+    color: var(--primary);
 }
 
 nav a:hover {
-    color: var(--accent);
+    color: var(--secondary);
 }
 
 
@@ -148,9 +146,8 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 
-    padding: 2rem;
-    padding: 2rem;
-    z-index: 1;
+    padding: 6rem;
+    z-index: 2;
 }
 /* TEXT */
 .hero h2 {
@@ -167,6 +164,7 @@ nav a:hover {
     background: white;
     color: var(--primary);
     font-weight: 600;
+    text-decoration: none;
 
     padding: 0.7rem 1.4rem;
     border-radius: 6px;
@@ -175,6 +173,7 @@ nav a:hover {
 }
 
 .hero .cta:hover {
+    background: var(--secondary);
     transform: translateY(-3px);
 }
 
@@ -195,6 +194,7 @@ footer a {
 }
 footer a:hover {
     color: var(--secondary);
+    text-decoration: underline;
 }
 
 /*============== PAGE-SPECIFIC STYLES ==========*/
@@ -248,7 +248,7 @@ form textarea:focus {
 
 /* SUBMIT BUTTON */
 button {
-    background: var(--highlight);
+    background: var(--primary);
     color: #FFFFFF;
     font-weight: 600;
     padding: 0.8rem 1.5rem;
@@ -262,7 +262,7 @@ button {
 button:hover {
     background: var(--accent);
     opacity: 0.9;
-    color: black;
+    
 }
 
 /*========== THANK YOU PAGE =========*/
@@ -311,21 +311,17 @@ button:hover {
     text-align: center;
     margin-top: 2rem;
     padding: 0.8rem 1.2rem;
-    background: var(--accent);
+    background: var(--primary);
     color: #FFFFFF;
     border-radius: 6px;
     text-decoration: none;
-    transition: 0.3s ease;
-}
-
-.btn {
     font-weight: 600;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: 0.2s ease;
 }
 
 .btn:hover {
-    background-color: var(--highlight);
+    background-color: var(--accent);
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
@@ -496,9 +492,6 @@ button:hover {
 
 /*============ HOME PAGE  =============*/
 
-.hero a:hover {
-    opacity: 0.9;
-}
 
 /* CATEGORIES */
 .categories {
