@@ -1,5 +1,6 @@
 // URL to JSON
-const url = "./data/insights.json";
+import { DATA_URL } from "./config.js";
+const url = DATA_URL;
 
 // DOM elements
 const params = new URLSearchParams(window.location.search);
@@ -101,19 +102,6 @@ function displayInsights(insights) {
     });
 }
 
-// ================= FILTER =================
-filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const category = button.dataset.category;
-
-        if (category === "all") {
-            displayInsights(allInsights);
-        } else {
-            const filtered = allInsights.filter(item => item.category === category);
-            displayInsights(filtered);
-        }
-    });
-});
 
 // ================= EVENT DELEGATION =================
 container.addEventListener("click", (e) => {
