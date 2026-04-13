@@ -1,5 +1,14 @@
 /* ========= LARGE SCREENS (1024px+) ========= */
 @media (min-width: 1024px) {
+     /* BRAND */
+    .logo {
+        height: 52px;
+    }
+
+    .brand-name {
+        font-size: 1.8rem;
+        letter-spacing: 0.3px;
+    }
 
   
     /* ===== HERO ===== */
@@ -28,6 +37,10 @@
     .navigation {
         gap: 2rem;
     }
+    .navigation a {
+        padding: 0.7rem 1.4rem;
+        font-size: 1.1rem;
+    }
     .navigation,
     .navigation.open {
         display: flex;
@@ -38,7 +51,6 @@
 
    /* EXPLORE PAGE */
    /* CARD GRID */
-    /* MAIN CONTAINER */
 
     #card-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
