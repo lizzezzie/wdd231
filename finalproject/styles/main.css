@@ -166,13 +166,13 @@ nav a:hover {
 }
 /* TEXT */
 .hero h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
     max-width: 600px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
 }
 /* CALL-TO-ACTION BUTTON */
 .hero .cta {
