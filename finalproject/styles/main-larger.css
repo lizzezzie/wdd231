@@ -36,8 +36,31 @@
     }
 
 
-}
+   /* EXPLORE PAGE */
+   /* CARD GRID */
+    /* MAIN CONTAINER */
 
+    #card-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+    }
+    /* fILTER BUTTONS */
+    .filter-buttons {
+        gap: 1.2rem;
+        margin: 3rem 0;
+    }
+    /* CARD */
+    .card {
+        padding: 1.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+    .card p {
+        font-size: 1.1rem;
+    }
+
+}
 
 
 
