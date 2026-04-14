@@ -191,6 +191,10 @@ nav a:hover {
     background: var(--secondary);
     transform: translateY(-3px);
 }
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
 
 /* FOOTER */
 footer {
@@ -466,7 +470,7 @@ button:hover {
 
 #modal-insight {
     font-style: italic;
-    color: #444;
+    color: black;
     margin-bottom: 1rem;
 }
 

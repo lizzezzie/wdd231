@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Knowledge Explorer</title>
+    <title>Thank You | Personal Growth Explorer</title>
 
     <meta name="description" content="Thank you for your reflection submission.">
     <meta name="author" content="Elizabeth Njoroge">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Thank You">
+    <meta property="og:description" content="Your reflection has been received.">
+    <meta property="og:url" content="https://lizzezzie.github.io/finalproject/thankyou.html">
+    <meta property="og:image" content="https://lizzezzie.github.io/wdd231/finalproject/images/hero.webp">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/thankyou.js" defer></script>
    
 </head>
 
 <body>
 
 <header>
-    <h1>Thank You</h1>
+    <a href="index.html" class="brand" aria-label="Home">
+        <img src="images/logo.svg" alt="Personal Growth Explorer Logo" class="logo">
+        <span class="brand-name">Personal Growth Explorer</span>
+    </a>
+    
 </header>
 
 <main>
     <section>
-        <h2>Your Reflection</h2>
+        <h2>Thank You</h2>
         <p class="intro">What you wrote matters. Take a moment to read it slowly.</p>
 
         <p><strong>Name:</strong> <span id="name"></span></p>
@@ -40,8 +62,6 @@
 <footer>
     <p>&copy; 2026 Knowledge Explorer</p>
 </footer>
-
-<script src="scripts/thankyou.js" defer></script>
 
 </body>
 </html>
