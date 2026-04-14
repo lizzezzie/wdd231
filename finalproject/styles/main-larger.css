@@ -71,6 +71,11 @@
     .card p {
         font-size: 1.1rem;
     }
+    /* THANK YOU PAGE */
+    .thankyou-section {
+        max-width: 800px;
+        padding: 3.5rem;
+    }
 
 }
 

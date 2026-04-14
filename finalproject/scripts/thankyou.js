@@ -1,29 +1,40 @@
-// Get URL parameters
-const params = new URLSearchParams(window.location.search);
+document.addEventListener("DOMContentLoaded", () => {
 
-const name = params.get("name");
-const focus = params.get("focus");
-const reflection = params.get("reflection");
-const goal = params.get("goal");
+    const params = new URLSearchParams(window.location.search);
 
-// Map for better display
-const focusMap = {
-    emotional: "Emotional Wellbeing",
-    growth: "Personal Growth",
-    health: "Physical Health"
-};
+    const name = params.get("name");
+    const focus = params.get("focus");
+    const reflection = params.get("reflection");
+    const goal = params.get("goal");
 
-// Display values
-document.querySelector("#name").textContent = name || "Anonymous";
-document.querySelector("#focus").textContent = focusMap[focus] || "Not specified";
-document.querySelector("#reflection").textContent = reflection || "No reflection provided.";
-document.querySelector("#goal").textContent = goal || "No goal provided.";
+    const focusMap = {
+        emotional: "Emotional Wellbeing",
+        growth: "Personal Growth",
+        health: "Physical Health"
+    };
 
-// If no data, show message
-if (!name && !reflection && !goal) {
-    document.querySelector(".thankyou-section").innerHTML = `
-        <h2>No reflection data found</h2>
-        <p>Please submit the form first.</p>
-        <a href="reflect.html">Go to Reflection Form</a>
-    `;
-}
+    const nameEl = document.querySelector("#name");
+    const focusEl = document.querySelector("#focus");
+    const reflectionEl = document.querySelector("#reflection");
+    const goalEl = document.querySelector("#goal");
+    const section = document.querySelector("main section");
+
+    // If core structure missing, stop safely
+    if (!section) return;
+
+    // If no data exists
+    if (!name && !reflection && !goal) {
+        section.innerHTML = `
+            <h2>No reflection data found</h2>
+            <p>Please submit the form first.</p>
+            <a href="reflect.html" class="btn">Go to Reflection Form</a>
+        `;
+        return;
+    }
+
+    // Safe rendering
+    if (nameEl) nameEl.textContent = name || "Anonymous";
+    if (focusEl) focusEl.textContent = focusMap[focus] || "Not specified";
+    if (reflectionEl) reflectionEl.textContent = reflection || "No reflection provided.";
+    if (goalEl) goalEl.textContent = goal || "No goal provided.";
+});
